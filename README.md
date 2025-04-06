@@ -3,7 +3,7 @@
 
 # relday
 
-this the file to derive the bmi from height in cm and weight in kg
+this the file to derive the bmi from height in cm and weight in kg only
 
 ``` r
 
