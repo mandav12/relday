@@ -26,6 +26,9 @@ BODMAS <br/> B - bracket <br> **O - exponential** <br> *D- division*
 ### S- substraction <br>
 
 <!-- badges: start -->
+
+[![Codecov test
+coverage](https://codecov.io/gh/mandav12/relday/graph/badge.svg)](https://app.codecov.io/gh/mandav12/relday)
 <!-- badges: end -->
 
 The goal of relday is to …

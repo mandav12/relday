@@ -1,5 +1,5 @@
 library(testthat)
-library(relday)
+library(tidyverse)
 
 test_that("relative_day computes correct relative days", {
   test_data <- tibble(
@@ -9,10 +9,11 @@ test_that("relative_day computes correct relative days", {
   )
 
   result <- relative_day(test_data, reference_date = TRTSDT, source_vars = c("ASTDT", "AENDT"))
-
+  
+  missing_vars <- c("ASTDTC", "AENDTC")
   # Check correct relative day calculations
   expect_equal(result$ASTDY, 5)
   expect_equal(result$AENDY, 10)
+  expect_error(relative_day(test_data, reference_date = TRTSDT, source_vars = c("ASTDTC", "AENDTC")), "Missing variables in dataset: ASTDTC, AENDTC")
 })
-
 
